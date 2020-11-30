@@ -37,13 +37,13 @@ function createP(tagName, clName, text) {
 
 (function foo() {
     setTimeout(() => {
-        createH('h1','title1', 'animation_backInLeft', 'YOUR'); 
+        createH('h1','title', 'animation_backInLeft', 'YOUR'); 
     }, 1);
     setTimeout(() => {
-        createH('h1','title2', 'animation_backInRight', 'FRONT-END'); 
+        createH('h1','title', 'animation_backInRight', 'FRONT-END'); 
     }, 500);
     setTimeout(() => {
-        createH('h1','title3', 'animation_backInLeft', 'DEVELOPER'); 
+        createH('h1','title', 'animation_backInLeft', 'DEVELOPER'); 
     }, 1000);
     setTimeout(() => {
         createH('p', 'text_style', 'animation_backInUp', 'My name is Nikolay Moroka');
@@ -71,49 +71,37 @@ function scroller() {
                 createDiv.classList.add('divStyle');
                 aboutMeS.append(createDiv);
                 createDiv.append(
-                    createP('p', 'style_text_in_p', 'HTML / CSS'),
-                    createImg('img', 'src', 'img/html.png'),
-                    createImg('img', 'src', 'img/css.png')
-                    );     
+                    createP('p', 'style_text_in_p', 'HTML / CSS'));     
             }, 1);
             setTimeout(() => {
                 let createDiv = document.createElement('div');
                 aboutMeS.append(createDiv);
                 createDiv.append(
-                    createP('p', 'style_text_in_p', 'SASS / SCSS preprocessors'),
-                    createImg('img', 'src', 'img/sass.png')
-                    ); 
+                    createP('p', 'style_text_in_p', 'SASS / SCSS preprocessors')); 
             }, 200);
             setTimeout(() => {
                 let createDiv = document.createElement('div');
                 aboutMeS.append(createDiv);
                 createDiv.append(
-                    createP('p', 'style_text_in_p', 'Cross-browser / valid / adaptive layout')
-                    ); 
+                    createP('p', 'style_text_in_p', 'Cross-browser / valid / adaptive layout')); 
             }, 400);
             setTimeout(() => {
                 let createDiv = document.createElement('div');
                 aboutMeS.append(createDiv);
                 createDiv.append(
-                    createP('p', 'style_text_in_p', 'JavaScript (ES6, ES6+)'),
-                    createImg('img', 'src', 'img/js.png')
-                    ); 
+                    createP('p', 'style_text_in_p', 'JavaScript (ES6, ES6+)')); 
             }, 600);
             setTimeout(() => {
                 let createDiv = document.createElement('div');
                 aboutMeS.append(createDiv);
                 createDiv.append(
-                    createP('p', 'style_text_in_p', 'JQuery'),
-                    createImg('img', 'src', 'img/jquery.png')
-                    ); 
+                    createP('p', 'style_text_in_p', 'JQuery')); 
             }, 800);
             setTimeout(() => {
                 let createDiv = document.createElement('div');
                 aboutMeS.append(createDiv);
                 createDiv.append(
-                    createP('p', 'style_text_in_p', 'Bootstrap'),
-                    createImg('img', 'src', 'img/bootstrap.png')
-                    ); 
+                    createP('p', 'style_text_in_p', 'Bootstrap')); 
             }, 1000);
             flag = 1;
         }
