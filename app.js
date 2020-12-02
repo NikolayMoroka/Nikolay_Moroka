@@ -22,12 +22,13 @@ function createImg(tagName, atrib, value) {
     let firstImg = document.createElement(tagName);
     firstImg.classList.add('animation_fadeInRight');
     firstImg.setAttribute(atrib, value)
+    heaD.append(firstImg);
     return firstImg;
 };
 
-function createP(tagName, clName, text) {
+function createElem(tagName, clName, text) {
     let secondP = document.createElement(tagName);
-    secondP.classList.add(clName, 'animation_fadeInRight');
+    secondP.classList.add(clName);
     secondP.innerHTML = text;
     return secondP;
 };
@@ -62,51 +63,52 @@ function createP(tagName, clName, text) {
 window.onscroll = scroller;
 let flag = 0;
 
-function scroller() {
-    if(flag == 0) {
-        if(window.pageYOffset > 300) {
-            createH2();
-            setTimeout(() => {
-                let createDiv = document.createElement('div');
-                createDiv.classList.add('divStyle');
-                aboutMeS.append(createDiv);
-                createDiv.append(
-                    createP('p', 'style_text_in_p', 'HTML / CSS'));     
-            }, 1);
-            setTimeout(() => {
-                let createDiv = document.createElement('div');
-                aboutMeS.append(createDiv);
-                createDiv.append(
-                    createP('p', 'style_text_in_p', 'SASS / SCSS preprocessors')); 
-            }, 200);
-            setTimeout(() => {
-                let createDiv = document.createElement('div');
-                aboutMeS.append(createDiv);
-                createDiv.append(
-                    createP('p', 'style_text_in_p', 'Cross-browser / valid / adaptive layout')); 
-            }, 400);
-            setTimeout(() => {
-                let createDiv = document.createElement('div');
-                aboutMeS.append(createDiv);
-                createDiv.append(
-                    createP('p', 'style_text_in_p', 'JavaScript (ES6, ES6+)')); 
-            }, 600);
-            setTimeout(() => {
-                let createDiv = document.createElement('div');
-                aboutMeS.append(createDiv);
-                createDiv.append(
-                    createP('p', 'style_text_in_p', 'JQuery')); 
-            }, 800);
-            setTimeout(() => {
-                let createDiv = document.createElement('div');
-                aboutMeS.append(createDiv);
-                createDiv.append(
-                    createP('p', 'style_text_in_p', 'Bootstrap')); 
-            }, 1000);
-            flag = 1;
-        }
-    }
-}
+// function scroller() {
+//     if(flag == 0) {
+//         if(window.pageYOffset > 300) {
+//             createH2();
+//             setTimeout(() => {
+//                 let createDiv = document.createElement('div');
+//                 createDiv.classList.add('card');
+//                 aboutMeS.append(createDiv);
+//                 createDiv.append(
+//                     createImg('img', 'src', 'img/html.png'),
+//                     createElem('h3', 'title_style_in_card', 'HTML5'));     
+//             }, 1);
+//             setTimeout(() => {
+//                 let createDiv = document.createElement('div');
+//                 aboutMeS.append(createDiv);
+//                 createDiv.append(
+//                     createImg('img', 'src', 'img/css.png')); 
+//             }, 200);
+//             setTimeout(() => {
+//                 let createDiv = document.createElement('div');
+//                 aboutMeS.append(createDiv);
+//                 createDiv.append(
+//                     createImg('img', 'src', 'img/sass.png')); 
+//             }, 400);
+//             setTimeout(() => {
+//                 let createDiv = document.createElement('div');
+//                 aboutMeS.append(createDiv);
+//                 createDiv.append(
+//                     createImg('img', 'src', 'img/js.png')); 
+//             }, 600);
+//             setTimeout(() => {
+//                 let createDiv = document.createElement('div');
+//                 aboutMeS.append(createDiv);
+//                 createDiv.append(
+//                     createImg('img', 'src', 'img/jquery.png')); 
+//             }, 800);
+//             setTimeout(() => {
+//                 let createDiv = document.createElement('div');
+//                 aboutMeS.append(createDiv);
+//                 createDiv.append(
+//                     createImg('img', 'src', 'img/bootstrap.png')); 
+//             }, 1000);
+//             flag = 1;
+//         }
+//     }
+// }
 
 
   
