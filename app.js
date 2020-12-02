@@ -1,6 +1,7 @@
 const heaD = document.getElementById('main_picture');
 const aboutMeF = document.getElementById('about_me-f');
-const aboutMeS = document.getElementById('about_me-s')
+const aboutMeS = document.getElementById('about_me-s');
+const titleSk = document.getElementById('title_skills')
 
 
 function createH(tagName, clName, clName2, text) {
@@ -8,6 +9,13 @@ function createH(tagName, clName, clName2, text) {
     firstH.classList.add(clName, clName2);
     firstH.innerHTML = text;
     heaD.append(firstH);
+};
+
+function createH1(tagName, clName, clName2, text) {
+    let firstH = document.createElement(tagName);
+    firstH.classList.add(clName, clName2);
+    firstH.innerHTML = text;
+    titleSk.append(firstH);
 };
 
 function createH2() {
@@ -62,6 +70,21 @@ function createElem(tagName, clName, text) {
 
 window.onscroll = scroller;
 let flag = 0;
+
+function scroller() {
+        if(flag == 0) {
+            if(window.pageYOffset > 300) {
+                setTimeout(() => {
+                    createH1('h1','title', 'animation_fadeInLeft', 'MY'); 
+                }, 1);
+                setTimeout(() => {
+                    createH1('h1','title', 'animation_fadeInLeft', 'SKILLS'); 
+                }, 1000);
+                     
+            flag = 1;
+        }
+    }
+}
 
 // function scroller() {
 //     if(flag == 0) {
