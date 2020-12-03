@@ -1,28 +1,33 @@
 const heaD = document.getElementById('main_picture');
 const aboutMeF = document.getElementById('about_me-f');
 const aboutMeS = document.getElementById('about_me-s');
-const titleSk = document.getElementById('title_skills')
+const titleSk = document.getElementById('title_skills');
+const infoSk = document.getElementById('info_skills');
+const titleTg = document.getElementById('title_technology');
+const infoTg = document.getElementById('info_technology');
+const logoTech = document.getElementById('logo');
 
 
-function createH(tagName, clName, clName2, text) {
+
+function createTitleMain(tagName, clName, clName2, text) {
     let firstH = document.createElement(tagName);
     firstH.classList.add(clName, clName2);
     firstH.innerHTML = text;
     heaD.append(firstH);
 };
 
-function createH1(tagName, clName, clName2, text) {
+function createTitleSkills(tagName, clName, clName2, text) {
     let firstH = document.createElement(tagName);
     firstH.classList.add(clName, clName2);
     firstH.innerHTML = text;
     titleSk.append(firstH);
 };
 
-function createH2() {
-    let secondH = document.createElement('h2');
-    secondH.classList.add('about_me-title', 'animation_fadeInLeft');
-    secondH.innerHTML = 'MY SKILLS';
-    aboutMeF.append(secondH);
+function createTitleTechnology(tagName, clName, clName2, text) {
+    let firstH = document.createElement(tagName);
+    firstH.classList.add(clName, clName2);
+    firstH.innerHTML = text;
+    titleTg.append(firstH);
 };
 
 
@@ -34,11 +39,18 @@ function createImg(tagName, atrib, value) {
     return firstImg;
 };
 
-function createElem(tagName, clName, text) {
+function createInfoSkills(tagName, clName, text) {
     let secondP = document.createElement(tagName);
-    secondP.classList.add(clName);
+    secondP.classList.add(clName, 'style_text');
     secondP.innerHTML = text;
-    return secondP;
+    infoSk.append(secondP);
+};
+
+function createInfoTechnology(tagName, clName, text) {
+    let secondP = document.createElement(tagName);
+    secondP.classList.add(clName, 'style_text');
+    secondP.innerHTML = text;
+    infoTg.append(secondP);
 };
 
 
@@ -46,17 +58,17 @@ function createElem(tagName, clName, text) {
 
 (function foo() {
     setTimeout(() => {
-        createH('h1','title', 'animation_backInLeft', 'YOUR'); 
+        createTitleMain('h1','title', 'animation_backInLeft', 'YOUR'); 
     }, 1);
     setTimeout(() => {
-        createH('h1','title', 'animation_backInRight', 'FRONT-END'); 
+        createTitleMain('h1','title', 'animation_backInRight', 'FRONT-END'); 
     }, 500);
     setTimeout(() => {
-        createH('h1','title', 'animation_backInLeft', 'DEVELOPER'); 
+        createTitleMain('h1','title', 'animation_backInLeft', 'DEVELOPER'); 
     }, 1000);
     setTimeout(() => {
-        createH('p', 'text_style', 'animation_backInUp', 'My name is Nikolay Moroka');
-        createH('p', 'text_style', 'animation_backInUp', 'I will create the best website for your buisness');
+        createTitleMain('p', 'text_style', 'animation_backInUp', 'My name is Nikolay Moroka');
+        createTitleMain('p', 'text_style', 'animation_backInUp', 'I will create the best website for your buisness');
     }, 2000);
 })();
 
@@ -75,73 +87,33 @@ function scroller() {
         if(flag == 0) {
             if(window.pageYOffset > 300) {
                 setTimeout(() => {
-                    createH1('h1','title', 'animation_fadeInLeft', 'MY'); 
+                    createTitleSkills('h1','title', 'animation_fadeInLeft', 'MY'); 
                 }, 1);
                 setTimeout(() => {
-                    createH1('h1','title', 'animation_fadeInLeft', 'SKILLS'); 
+                    createTitleSkills('h1','title', 'animation_fadeInLeft', 'SKILLS'); 
+                }, 500);
+                setTimeout(() => {
+                    createInfoSkills('li', 'animation_fadeInRight', 'HTML5 / CSS3'); 
+                }, 600);
+                setTimeout(() => {
+                    createInfoSkills('li', 'animation_fadeInRight', 'SASS / SCSS preprocessors'); 
+                }, 800);
+                setTimeout(() => {
+                    createInfoSkills('li', 'animation_fadeInRight', 'JavaScript (ES6/6+)'); 
                 }, 1000);
+                setTimeout(() => {
+                    createInfoSkills('li', 'animation_fadeInRight', 'jQuery'); 
+                }, 1200);
+                setTimeout(() => {
+                    createInfoSkills('li', 'animation_fadeInRight', 'Vue.js'); 
+                }, 1400);
+
                      
             flag = 1;
         }
+       
     }
 }
 
-// function scroller() {
-//     if(flag == 0) {
-//         if(window.pageYOffset > 300) {
-//             createH2();
-//             setTimeout(() => {
-//                 let createDiv = document.createElement('div');
-//                 createDiv.classList.add('card');
-//                 aboutMeS.append(createDiv);
-//                 createDiv.append(
-//                     createImg('img', 'src', 'img/html.png'),
-//                     createElem('h3', 'title_style_in_card', 'HTML5'));     
-//             }, 1);
-//             setTimeout(() => {
-//                 let createDiv = document.createElement('div');
-//                 aboutMeS.append(createDiv);
-//                 createDiv.append(
-//                     createImg('img', 'src', 'img/css.png')); 
-//             }, 200);
-//             setTimeout(() => {
-//                 let createDiv = document.createElement('div');
-//                 aboutMeS.append(createDiv);
-//                 createDiv.append(
-//                     createImg('img', 'src', 'img/sass.png')); 
-//             }, 400);
-//             setTimeout(() => {
-//                 let createDiv = document.createElement('div');
-//                 aboutMeS.append(createDiv);
-//                 createDiv.append(
-//                     createImg('img', 'src', 'img/js.png')); 
-//             }, 600);
-//             setTimeout(() => {
-//                 let createDiv = document.createElement('div');
-//                 aboutMeS.append(createDiv);
-//                 createDiv.append(
-//                     createImg('img', 'src', 'img/jquery.png')); 
-//             }, 800);
-//             setTimeout(() => {
-//                 let createDiv = document.createElement('div');
-//                 aboutMeS.append(createDiv);
-//                 createDiv.append(
-//                     createImg('img', 'src', 'img/bootstrap.png')); 
-//             }, 1000);
-//             flag = 1;
-//         }
-//     }
-// }
 
-
-  
-//  elem.setAttribute(name, value) – устанавливает атрибут
-  
-
-// function createImg(tagName, atrib, value) {
-//     let firstImg = document.createElement(tagName);
-//     firstImg.classList.add('animation_fadeInRight');
-//     firstImg.setAttribute(atrib, value)
-//     aboutMeS.append(firstImg);
-// };
 
