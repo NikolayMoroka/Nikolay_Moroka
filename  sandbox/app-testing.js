@@ -1,32 +1,63 @@
-const aboutMS = document.getElementById('about_me-s');
+const first = document.getElementById('first');
 
-
-
-
-
-
-let createDiv = document.createElement('div');
-aboutMS.append(createDiv);
-
-function createImg(tagName, atrib, value) {
-    let firstImg = document.createElement(tagName);
-    firstImg.classList.add('animation_fadeInRight');
-    firstImg.setAttribute(atrib, value)
-    return firstImg;
-};
-
-function createP(tagName, clName, text) {
+function createInfoSkills(tagName, clName, id, text) {
     let secondP = document.createElement(tagName);
-    secondP.classList.add(clName, 'animation_fadeInRight');
+    secondP.classList.add(clName, 'style_text');
+    secondP.id = (id);
     secondP.innerHTML = text;
-    return secondP;
+    first.append(secondP);
 };
-createDiv.append(
-    createP('p', 'style_text_in_p', 'HTML / CSS'),
-    createImg('img', 'src', 'img/html.png'),
-    createImg('img', 'src', 'img/css.png')
-    );
 
+window.onscroll = scroller;
+let flag = 0;
 
+function scroller() {
+        if(flag == 0) {
+            if(window.pageYOffset > 10) {
+                setTimeout(() => {
+                    const html = document.getElementById('html');
+                        let secondP = document.createElement('p');
+                        secondP.classList.add('style_text');
+                        secondP.innerHTML = 'HTML';
+                        html.append(secondP);
+                }, 1);
+                setTimeout(() => {
+                    const css = document.getElementById('css');
+                    let secondP = document.createElement('p');
+                        secondP.classList.add('style_text');
+                        secondP.innerHTML = 'CSS';
+                        css.append(secondP);
+                }, 1);
+                setTimeout(() => {
+                    const js = document.getElementById('js');
+                    let secondP = document.createElement('p');
+                        secondP.classList.add('style_text');
+                        secondP.innerHTML = 'JavaScript';
+                        js.append(secondP);
+                }, 1);
+               
+
+                     
+            flag = 1;
+        }
+       
+    }
+}
+
+const img = document.getElementById('img')
+
+const htmlTg = document.getElementById('html');
+htmlTg.addEventListener('mouseover', e => {
+    
+    let firstImg = document.createElement('img');
+    firstImg.classList.add('animation_fadeInRight', 'img');
+    firstImg.setAttribute('src', '../img/html.png')
+    img.append(firstImg);
+})
+
+const imgDel = document.getElementsByClassName('img');
+imgDel.addEventListener('mouseout', e => {
+    imgDel.remove();
+})
 
 
