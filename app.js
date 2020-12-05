@@ -31,17 +31,20 @@ function createTitleTechnology(tagName, clName, clName2, text) {
 };
 
 
-function createImg(tagName, atrib, value) {
+function createImg(tagName, atrib, value, text) {
+    const img = document.getElementById('img')
     let firstImg = document.createElement(tagName);
-    firstImg.classList.add('animation_fadeInRight');
+    firstImg.classList.add('img_in', 'flip');
+    firstImg.id = genIDge();
     firstImg.setAttribute(atrib, value)
-    heaD.append(firstImg);
-    return firstImg;
-};
+    firstImg.innerHTML = text;
+    img.append(firstImg);
+}
 
-function createInfoSkills(tagName, clName, text) {
+function createInfoSkills(tagName, id, text) {
     let secondP = document.createElement(tagName);
-    secondP.classList.add(clName, 'style_text');
+    secondP.classList.add('style_text', 'animation_fadeInRight');
+    secondP.id = (id);
     secondP.innerHTML = text;
     infoSk.append(secondP);
 };
@@ -93,26 +96,63 @@ function scroller() {
                     createTitleSkills('h1','title', 'animation_fadeInLeft', 'SKILLS'); 
                 }, 500);
                 setTimeout(() => {
-                    createInfoSkills('li', 'animation_fadeInRight', 'HTML5 / CSS3'); 
+                    createInfoSkills('li', 'html', 'HTML'); 
                 }, 600);
                 setTimeout(() => {
-                    createInfoSkills('li', 'animation_fadeInRight', 'SASS / SCSS preprocessors'); 
+                    createInfoSkills('li', 'css', 'CSS'); 
                 }, 800);
                 setTimeout(() => {
-                    createInfoSkills('li', 'animation_fadeInRight', 'JavaScript (ES6/6+)'); 
+                    createInfoSkills('li', 'js', 'JavaScript'); 
                 }, 1000);
-                setTimeout(() => {
-                    createInfoSkills('li', 'animation_fadeInRight', 'jQuery'); 
-                }, 1200);
-                setTimeout(() => {
-                    createInfoSkills('li', 'animation_fadeInRight', 'Vue.js'); 
-                }, 1400);
-
-                     
             flag = 1;
         }
        
     }
+}
+
+
+
+
+
+
+infoSk.addEventListener('mouseover', function(e){
+    if(e.target.id == 'first') {
+        return
+    } else if(e.target.id == 'html') {
+        createImg('img', 'src', 'img/html.png', 'HTML5');
+        createImg('img', 'src', 'img/bootstrap.png');
+    } else if(e.target.id == 'css') {
+        createImg('img', 'src', 'img/css.png');
+        createImg('img', 'src', 'img/sass.png');
+    } else if(e.target.id == 'js') {
+        createImg('img', 'src', 'img/js.png');
+        createImg('img', 'src', 'img/jquery.png');
+        createImg('img', 'src', 'img/vue.png');
+    } else {
+        return
+    }
+    });
+
+
+infoSk.addEventListener('mouseout', function(e){ 
+    if(e.target.id == 'first') {
+        return
+        } else if(e.target.id !== 'html', 'css', 'js') {
+        const img = document.getElementById('img');
+        while (img.firstChild) {
+        img.removeChild(img.firstChild);
+        }
+    } else {
+        return
+    }
+});
+
+function genIDge(value) {
+    var firstPart = (Math.random() * 46656) | 0;
+    var secondPart = (Math.random() * 46656) | 0;
+    firstPart = ("000" + firstPart.toString(36)).slice(-3);
+    secondPart = ("000" + secondPart.toString(36)).slice(-3);
+    return firstPart + secondPart;
 }
 
 

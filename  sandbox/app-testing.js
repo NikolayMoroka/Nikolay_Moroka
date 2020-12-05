@@ -8,6 +8,14 @@ function createInfoSkills(tagName, id, text) {
     first.append(secondP);
 };
 
+function createImg(tagName, atrib, value) {
+    const img = document.getElementById('img')
+    let firstImg = document.createElement(tagName);
+    firstImg.id = genIDge();
+    firstImg.setAttribute(atrib, value)
+    img.append(firstImg);
+}
+
 window.onscroll = scroller;
 let flag = 0;
 
@@ -25,76 +33,38 @@ function scroller() {
                 }, 400);    
             flag = 1;
         }
-       
     }
 }
-
-
 
 document.getElementById('first').addEventListener('mouseover', function(e){
     if(e.target.id == 'first') {
         return
     } else if(e.target.id == 'html') {
-        createImg('img', 'src', '../img/html.png')
-        let id = e.target.id;
-        console.log(id);
+        createImg('img', 'src', '../img/html.png');
+        createImg('img', 'src', '../img/bootstrap.png');
     } else if(e.target.id == 'css') {
-        createImg('img', 'src', '../img/css.png')
+        createImg('img', 'src', '../img/css.png');
+        createImg('img', 'src', '../img/sass.png');
     } else if(e.target.id == 'js') {
-        createImg('img', 'src', '../img/js.png')
-        createImg('img', 'src', '../img/jquery.png')
-        createImg('img', 'src', '../img/vue.png')
+        createImg('img', 'src', '../img/js.png');
+        createImg('img', 'src', '../img/jquery.png');
+        createImg('img', 'src', '../img/vue.png');
     } else {
         return
     }
     });
 
-    
-
-// document.getElementById('first').addEventListener('mouseout', function(e){
-//     if(e.target.id == 'first' && 'html') {
-//         return
-//     } else {
-     
-//      let idS = img.id;
-//      console.log(idS);
-//      document.querySelector().remove();
-//    };
-//    if(e.target.id == 'first' && 'html') {
-//     return
-//     } else {
-
-//     document.getElementById('imgHtml').remove();
-//     };
-//     if(e.target.id == 'first' && 'html') {
-//         return
-//     } else {
-
-//     document.getElementById('imgHtml').remove();
-//     };
-// });
-
-// document.getElementById('first').addEventListener('mouseout', function(e){ 
-//     if(e.target.id == 'first' && 'html') {
-//         return
-//     } else {
-//     document.querySelectorAll('#img');
-//     let id = e.target.id;
-//     console.log(id);
-//     // document.getElementById(id).remove();
-//     } 
-// });
-
-
-
-
-function createImg(tagName, atrib, value) {
-    const img = document.getElementById('img')
-    let firstImg = document.createElement(tagName);
-    firstImg.id = genIDge();
-    firstImg.setAttribute(atrib, value)
-    img.append(firstImg);
+const img = document.getElementById('first');
+img.addEventListener('mouseout', function(e){ 
+if(e.target.id == 'first') {
+        return
+    } else if(e.target.id !== 'html', 'css', 'js') {
+    const img = document.getElementById('img');
+    while (img.firstChild) {
+    img.removeChild(img.firstChild);
 }
+    }
+});
 
 function genIDge(value) {
     var firstPart = (Math.random() * 46656) | 0;
