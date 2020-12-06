@@ -104,12 +104,13 @@ a:hover {
 
 .first {
     width: 100%;
-    height: 700px;
+    height: 100%;
     background-image: 
     linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
     url(img/fon2.jpg);
     background-position: left, right;
     background-position-y: 40%;
+    padding-bottom: 20px;
 }
 
 
@@ -136,20 +137,83 @@ a:hover {
   transform: scale(1.05);
 }
 
+.technology {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
 .img {
     height: 400px;
-    max-width: 100%;
+    /* max-width: 100%; */
     text-align: center;
-    margin: 0 10px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    
 }
 
 .img_in {
     padding-top: 50px;
-    margin: 0 50px;
+    margin: 0 20px;
+    
 }
 
+.info_tech {
+    padding-top: 95px;
+}
 
+.text_style_in_techInfo {
+    color: white;
+    font-size: 24px;
+}
 
+/* style for contacts */
+
+.contacts {
+    max-width: 100%;
+    background-color: #334f6e;
+    height: 400px;
+}
+
+.link {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.link a {
+margin: 0 30px;
+display: inline-block;
+color: white;
+}
+
+.link a img {
+    width: 68pxЛПДФЫ252959
+    ЛПДФЫ252959
+    ;
+    height: 68px;
+}
+
+.phone {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.number {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+
+.link a:hover {
+    -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
 
 /* style for animation */
 

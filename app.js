@@ -6,6 +6,8 @@ const infoSk = document.getElementById('info_skills');
 const titleTg = document.getElementById('title_technology');
 const infoTg = document.getElementById('info_technology');
 const logoTech = document.getElementById('logo');
+const infoTech = document.getElementById('info_tech');
+const img = document.getElementById('img')
 
 
 
@@ -31,13 +33,11 @@ function createTitleTechnology(tagName, clName, clName2, text) {
 };
 
 
-function createImg(tagName, atrib, value, text) {
-    const img = document.getElementById('img')
+function createImg(tagName, atrib, value) {
     let firstImg = document.createElement(tagName);
     firstImg.classList.add('img_in', 'flip');
     firstImg.id = genIDge();
     firstImg.setAttribute(atrib, value)
-    firstImg.innerHTML = text;
     img.append(firstImg);
 }
 
@@ -56,6 +56,12 @@ function createInfoTechnology(tagName, clName, text) {
     infoTg.append(secondP);
 };
 
+function createInfoTech(tagName, text) {
+    let secondP = document.createElement(tagName);
+    secondP.classList.add('text_style_in_techInfo', 'animation_fadeInRight');
+    secondP.innerHTML = text;
+    infoTech.append(secondP);
+};
 
 
 
@@ -96,14 +102,18 @@ function scroller() {
                     createTitleSkills('h1','title', 'animation_fadeInLeft', 'SKILLS'); 
                 }, 500);
                 setTimeout(() => {
-                    createInfoSkills('li', 'html', 'HTML'); 
+                    createInfoSkills('h3', 'html', 'HTML'); 
                 }, 600);
                 setTimeout(() => {
-                    createInfoSkills('li', 'css', 'CSS'); 
+                    createInfoSkills('h3', 'css', 'CSS'); 
                 }, 800);
                 setTimeout(() => {
-                    createInfoSkills('li', 'js', 'JavaScript'); 
+                    createInfoSkills('h3', 'js', 'JavaScript'); 
                 }, 1000);
+                setTimeout(() => {
+                    createInfoSkills('h3', 'other', 'And other'); 
+                }, 1200);
+
             flag = 1;
         }
        
@@ -119,15 +129,36 @@ infoSk.addEventListener('mouseover', function(e){
     if(e.target.id == 'first') {
         return
     } else if(e.target.id == 'html') {
-        createImg('img', 'src', 'img/html.png', 'HTML5');
+        createImg('img', 'src', 'img/html.png');
         createImg('img', 'src', 'img/bootstrap.png');
+        createInfoTech('li', 'HTML5');
+        createInfoTech('li', 'Bootstrap');
+        createInfoTech('li', 'Adaptive / cross-browser / valide laoyt');
     } else if(e.target.id == 'css') {
         createImg('img', 'src', 'img/css.png');
         createImg('img', 'src', 'img/sass.png');
+        createInfoTech('li', 'CSS3');
+        createInfoTech('li', 'SASS / SCSS preproccesors');
+        createInfoTech('li', 'CSS Grid');
+        createInfoTech('li', 'CSS Animation');
     } else if(e.target.id == 'js') {
         createImg('img', 'src', 'img/js.png');
         createImg('img', 'src', 'img/jquery.png');
         createImg('img', 'src', 'img/vue.png');
+        createInfoTech('li', 'JavaScript (ES6/ES6+)');
+        createInfoTech('li', 'jQuery');
+        createInfoTech('li', 'Vue.js');
+    } else if(e.target.id == 'other') {
+        createImg('img', 'src', 'img/git.png');
+        createImg('img', 'src', 'img/gulp.png');
+        createImg('img', 'src', 'img/figma.png');
+        createImg('img', 'src', 'img/photoshop.png');
+        createImg('img', 'src', 'img/wordpress.png');
+        createInfoTech('li', 'Git');
+        createInfoTech('li', 'Gulp');
+        createInfoTech('li', 'Figma');
+        createInfoTech('li', 'PhotoShop');
+        createInfoTech('li', 'WordPress');
     } else {
         return
     }
@@ -138,9 +169,11 @@ infoSk.addEventListener('mouseout', function(e){
     if(e.target.id == 'first') {
         return
         } else if(e.target.id !== 'html', 'css', 'js') {
-        const img = document.getElementById('img');
         while (img.firstChild) {
         img.removeChild(img.firstChild);
+        }
+        while (infoTech.firstChild) {
+            infoTech.removeChild(infoTech.firstChild);
         }
     } else {
         return
