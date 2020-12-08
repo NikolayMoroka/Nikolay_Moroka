@@ -96,11 +96,9 @@ function scroller() {
         if(flag == 0) {
             if(window.pageYOffset > 300) {
                 setTimeout(() => {
-                    createTitleSkills('h1','title', 'animation_fadeInLeft', 'MY'); 
+                    createTitleSkills('h1','style_title_skills', 'animation_fadeInLeft', 'MY SKILLS'); 
                 }, 1);
-                setTimeout(() => {
-                    createTitleSkills('h1','title', 'animation_fadeInLeft', 'SKILLS'); 
-                }, 500);
+               
                 setTimeout(() => {
                     createInfoSkills('h3', 'html', 'HTML'); 
                 }, 600);
