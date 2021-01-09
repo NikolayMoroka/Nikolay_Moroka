@@ -1,12 +1,75 @@
 body {
   width: 100%;
-  background-color: rgb(63, 10, 124);
+  background: linear-gradient(#3f0a7c, #6d049e);
   color: #fff;
-  height: 120vh;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgba(20, 2, 41, 0.5);
+}
+
+.navigation {
+  color: white;
+  margin-left: auto;
+}
+
+.navigation a  {
+  text-decoration: none;
+  color: #fff;
+  font-weight: normal;
+  margin-left: 30px;
+  transition: 1s;
+  height: 18px;
+  width: 70px;
+  
+}
+
+/* .logo {
+  height: 30px;
+  width: 150px;
+  position: absolute;
+  margin-top: 1px;
+} */
+
+/* .navigation a:hover {
+  font-size: 20px;
+} */
+ 
+
+
+.main_section {
+  height: 550px;
+  margin-top: 50px;
+  width: auto;
+  display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main_img {
+  margin-top: 15px;
+}
+
+.main_title {
+  margin: auto;
+}
+
+.title_m {
+  color: white;
+  font-size: 70px;
+}
+
+.second {
+  margin-top: 150px;
 }
 
 .block {
-  margin-top: 100px;
   display: grid;
     grid-template-rows: repeat(1, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -15,5 +78,91 @@ body {
 img {
   width: 500px;
   height: 500px;
-  margin-top: -111px;
+  margin: auto;
 }
+
+.info {
+  margin: auto;
+}
+
+.footer {
+  height: 150px;
+  background-color: #292929;
+}
+
+/* style for animation */
+
+.flip{
+  animation: rotateIn;
+  animation-duration: 1.5s;
+}
+
+.animation_backInLeft {
+  animation: backInLeft;
+  animation-duration: 2.5s;
+}
+
+.animation_backInRight {
+  animation: backInRight;
+  animation-duration: 2.5s;
+}
+
+.animation_backInUp {
+  animation: fadeInUpBig;
+  animation-duration: 2.5s;
+}
+
+.animation_fadeInLeft{
+  animation: fadeInLeft;
+  animation-duration: 1500ms;
+}
+
+.animation_fadeInRight{
+  animation: fadeInRight;
+  animation-duration: 1500ms;
+}
+
+.bling {
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret .5s step-end infinite;
+    
+}
+
+.typing-text {
+   width: 800px;
+  position: relative;
+  font-size: 24px;
+  color: white;
+  overflow: hidden; 
+  border-right: .15em solid orange;
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation-fill-mode: none;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+
+
+
+[data-aos="rotate"] {
+  transform: rotate(-360deg);
+  opacity: 0;
+}
+
+[data-aos="rotate"].aos-animate {
+  transform: rotate(0);
+  opacity: 1;
+}
+
+
