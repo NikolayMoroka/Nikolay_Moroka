@@ -29,17 +29,6 @@ body {
   width: 70px;
   
 }
-
-/* .logo {
-  height: 30px;
-  width: 150px;
-  position: absolute;
-  margin-top: 1px;
-} */
-
-/* .navigation a:hover {
-  font-size: 20px;
-} */
  
 .first {
   height: 100vh;
@@ -71,6 +60,11 @@ body {
 
 .second {
   /* margin-top: 150px; */
+}
+
+.block_title {
+  text-align: center;
+  font-size: 50px;
 }
 
 .about_me {
