@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  background: linear-gradient(#3f0a7c, #6d049e);
+  background-color: #3f0a7c;
   color: #fff;
 }
 
@@ -41,7 +41,9 @@ body {
   font-size: 20px;
 } */
  
-
+.first {
+  height: 100vh;
+}
 
 .main_section {
   height: 550px;
@@ -57,16 +59,23 @@ body {
 }
 
 .main_title {
-  margin: auto;
+  margin-top: 105px;
+  margin-left: 50px;
 }
+
 
 .title_m {
   color: white;
-  font-size: 70px;
+  font-size: 75px;
 }
 
 .second {
-  margin-top: 150px;
+  /* margin-top: 150px; */
+}
+
+.about_me {
+  text-align: center;
+  font-size: 50px;
 }
 
 .block {
@@ -76,8 +85,6 @@ body {
 }
 
 img {
-  width: 500px;
-  height: 500px;
   margin: auto;
 }
 
@@ -164,5 +171,18 @@ img {
   transform: rotate(0);
   opacity: 1;
 }
+
+[data-aos="tracking-in-contract"] {
+  letter-spacing: 1em;
+  opacity: 0;
+}
+
+
+
+[data-aos="tracking-in-contract"].aos-animate {
+  letter-spacing: normal;
+  opacity: 1
+}
+
 
 
