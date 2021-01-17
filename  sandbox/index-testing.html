@@ -15,11 +15,17 @@
 <body>
     <header class="header">
         <div class="container d-flex align-items-center">
-            <!-- <a href="#"> <img class="logo" src="../img/Logo.png" alt=""> </a> -->
+            <a href="#"> <img class="logo" src="../img/Logo.png" alt=""> </a>
             <nav class="navigation">
-                <a class="zoom" href="">About me</a>
-                <a class="zoom" href="">Portfolio</a>
-                <a class="zoom" href="">Contacst</a>
+                <div class="zoom">
+                    <a href="">About me</a>
+                </div>
+                <div class="zoom">
+                    <a href="">Portfolio</a>
+                </div>
+                <div class="zoom">
+                    <a href="">Contacts</a>
+                </div>
             </nav>
         </div>    
     </header>
@@ -36,7 +42,7 @@
    <section class="second">
        <div class="container">
            <div class="block_title">
-                <h2 class="about_me" data-aos="tracking-in-contract"> ABOUT ME </h2>
+                <h2 class="h2" data-aos="tracking-in-contract"> ABOUT ME </h2>
            </div>
            <div class="block">
                 <div class="info" data-aos="zoom-in-right" data-aos-delay="0">
@@ -118,10 +124,10 @@
             </div>
        </div>
    </section>
-   <section class="second">
+   <section class="third">
         <div class="container">
             <div class="block_title">
-                <h2 class="about_me" data-aos="tracking-in-contract"> MY PORTFOLIO </h2>
+                <h2 class="h2" data-aos="tracking-in-contract"> MY PORTFOLIO </h2>
             </div>
             <div class="block_portfolio">
                 <div class="work">
@@ -131,15 +137,45 @@
             </div>
         </div>
     </section>
+    <section class="fourth">
+        <div class="container">
+            <div class="block_title">
+                <h2 class="h2" data-aos="tracking-in-contract"> MY CONTACTS </h2>
+            </div>
+            <div class="block_contacts grid">
+                    <div class="contacts">
+                        <h4>City:</h4>
+                        <p>Kharkiv, Ukraine</p>
+                        <h4>Phone number:</h4>
+                        <p>+380 66 000 12 86</p>
+                        <p>(Telegram, Viber, WhatsApp)</p>
+                        <h4>Email:</h4>
+                        <p>nikolaymorokaw@gmail.com</p>
+                    </div>
+                    <form class="form" id="mailForm">
+                        <div class="container">
+                            <input type="email" id="email" name="email" placeholder="Your Email" class="form-control"><br> 
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="form-control"><br> 
+                            <input type="phone" id="phone" name="phone" placeholder="Your Number" class="form-control"><br> 
+                            <textarea name="message" id="message" placeholder="Your message" class="form-control"></textarea><br>
+                            <button type="button" id="sendMail" class="btn btn-success">Send message</button>  
+                        </div>
+                    </form>
+                    <div class="" id="errorMess"></div>
+                </div>
+            </div>
+        </div>
+    </section>
    <section>
        <footer class="footer">
-           
+        <a href="#"> <img class="logo" src="../img/Logo.png" alt=""> </a>
        </footer>
    </section>
 
     <!-- <script src="app_create_title.js"></script> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="app-testing.js"></script>
-
+    <script src="form_mail.js"></script>
 </body>
 </html>
