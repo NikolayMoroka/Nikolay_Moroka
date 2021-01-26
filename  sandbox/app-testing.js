@@ -42,7 +42,7 @@ function createTitleMain(tagName, clName, clName2, text) {
         createTitleMain('h1','title_m', 'animation_backInLeft', 'DEVELOPER'); 
     }, 1700);
     setTimeout(() => {
-        createTitleMain('p', 'text_style', 'animation_backInUp', 'My name is Nikolay Moroka');
-        createTitleMain('p', 'text_style', 'animation_backInUp', 'I will create the best website for your buisness');
+        createTitleMain('p', 'text', 'animation_backInUp', 'My name is Nikolay Moroka');
+        createTitleMain('p', 'text', 'animation_backInUp', 'I will create the best website for your buisness');
     }, 2200);
 })();
