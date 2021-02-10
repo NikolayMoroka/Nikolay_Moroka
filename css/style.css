@@ -280,6 +280,9 @@ img {
   .title_m {
     font-size: 65px;
   }
+  .main_img img {
+    width: 400px;
+  }
   .info {
     width: 400px;
   }

@@ -11,7 +11,10 @@ jQuery(document).ready(function(){
         }
     }
 
-    $(document).on('click', '.burger', function(){
+    var clickHandler = ("ontouchstart" in window ? "touchend" : "click")
+
+    $(document).on(clickHandler, '.burger', function(){
+        var userAgent = window.navigator.userAgent;
         $(this).toggleClass('is-active');
         $('.header__nav-wrap').toggleClass('is-active');
     });
