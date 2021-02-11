@@ -46,3 +46,4 @@ function createTitleMain(tagName, clName, clName2, text) {
         createTitleMain('p', 'text', 'animation_backInUp', 'I will create the best website for your buisness');
     }, 2200);
 })();
+

@@ -129,10 +129,6 @@ a:hover {
   font-size: 75px;
 }
 
-.information {
-  /* margin-top: 150px; */
-}
-
 .block_title {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -144,17 +140,6 @@ a:hover {
   height: 500px;
   width: 500px;
 } 
-
-/* .h2 {
-  text-align: center;
-  font-size: 50px;
-}
-
-
-img {
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 .info {
   margin: auto;
@@ -202,6 +187,70 @@ img {
   height: 150px;
   background-color: #292929;
 }
+
+/* style for button back to top */
+
+.scrollToTop{ 
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 500;
+  transition: all .5s ease-in-out;
+  text-align: center;
+  cursor: pointer; 
+  border: 1px solid transparent;
+  border-radius: 100%;
+  background: rgba(20, 2, 41, 0.5);
+}
+
+.scrollToTop span {
+   margin-top: 12px;
+   color: #fd6500;
+  }
+
+
+.showScrollTop { 
+  font-size: 14px; 
+  opacity: 1;
+}
+
+.scrollToTop:hover {
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.scrollToTop:active { 
+  background-color :#f70808;
+}
+  
+  /* FontAwesome */
+  @font-face { 
+    font-family:'FontAwesome';
+    src: url('../fontawesome-webfont-custom-10.ttf') format('truetype');font-weight:normal;
+    font-style:normal;
+  }
+
+  .fa {
+    display:inline-block;
+    font:normal normal normal 14px/1 FontAwesome;
+    font-size:inherit;
+    text-rendering:auto;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+  .fa-opencart:before{ content:"\f23d";}
+  .fa-phone:before{ content:"\e800";}
+  .fa-clock-o:before{ content:"\e801";}
+  .fa-truck:before{ content:"\e802";}
+  .fa-credit-card:before{ content:"\e808";}
+  .fa-chevron-up:before{ content:"\e805";}
+  .fa-search:before{ content:"\e806";}
+  .fa-cancel-circled:before { content:"\e810";}
+  .fa-angle-right:before { content:"\f105";}
+  .fa-location:before { content:"\e80d";}
 
 /* style for animation */
 
@@ -356,10 +405,9 @@ img {
     width: 100%;
     background-color: #2b1553;
     position: absolute;
+    padding: 15px 0;
     margin-left: -60px;
-    padding-top: 30px;
     border-top: 1px solid #fff
-
   }
   .nav--header {
     display: inline-block;
@@ -367,8 +415,12 @@ img {
   .nav__item {
     display: block;
     margin-right: 0;
-    margin-bottom: 30px;
   }
+
+  .nav__item  + .nav__item{
+    margin-top: 30px;
+  }
+  
   .nav__item::after {
     display: none;
   }

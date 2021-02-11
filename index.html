@@ -26,9 +26,9 @@
             </div>
             <div class="header__nav-wrap">
               <nav class="nav nav--header">
-                <a href="#" class="nav__item">About me</a>
-                <a href="#" class="nav__item">Portfolio</a>
-                <a href="#" class="nav__item">Contacts</a>
+                <a href="#about_me" class="nav__item">About me</a>
+                <a href="#portfolio" class="nav__item">Portfolio</a>
+                <a href="#contacts" class="nav__item">Contacts</a>
               </nav>
           </div>
         </div>
@@ -43,7 +43,7 @@
     </div>
     <div class="container information">
         <div class="block_title">
-            <h2 class="h2" data-aos="tracking-in-contract"> ABOUT ME </h2>
+            <h2 class="h2" id="about_me" data-aos="tracking-in-contract"> ABOUT ME </h2>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-6 info" data-aos="zoom-in-right" data-aos-delay="0">
@@ -100,7 +100,7 @@
     </div>
     <div class="container portfolio">
         <div class="block_title">
-            <h2 class="h2" data-aos="tracking-in-contract"> PORTFOLIO </h2>
+            <h2 class="h2" id="portfolio" data-aos="tracking-in-contract"> PORTFOLIO </h2>
         <div class="row">
             </div>
             <div class="block_portfolio">
@@ -113,7 +113,7 @@
     </div>
     <div class="container cont">
         <div class="block_title">
-            <h2 class="h2" data-aos="tracking-in-contract"> CONTACTS </h2>
+            <h2 class="h2" id="contacts" data-aos="tracking-in-contract"> CONTACTS </h2>
         </div>
         <div class="row block_contacts">
                     <div class="col-xl-3 col-lg-6 col-sm-12  contacts">
@@ -149,7 +149,8 @@
         <!-- <footer class="footer">
             <a href="#"> <img class="logo" src="img/Logo.png" alt=""> </a>
            </footer> -->
-    
+
+           <a class="scrollToTop" onclick="jQuery('html,body').animate({scrollTop:0}, 'slow');"><span class="fa fa-chevron-up"></span></a>
     <!-- <script src="app_create_title.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
@@ -158,5 +159,6 @@
     <script src="app/form_mail.js"></script>
     <script src="app/app-testing.js"></script>
     <script src="app/main-menu.js"></script>
+    <script src="app/skroll_to_top.js"></script>
 </body>
 </html>
