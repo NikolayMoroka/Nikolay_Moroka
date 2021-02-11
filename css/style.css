@@ -9,6 +9,7 @@ body {
 p {
   font-weight: 400;
   font-size: 14px/1rem;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -171,7 +172,21 @@ img {
 
 .contacts {
   padding-left: 50px;
-  margin: auto;
+}
+
+.contacts a {
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.contacts h4 {
+  margin-top: 15px;
+}
+
+.contacts a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .form {
@@ -286,6 +301,10 @@ img {
   .info {
     width: 400px;
   }
+  .form_cont {
+    margin: auto;
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -364,6 +383,7 @@ img {
     width: 100%;
     padding: 0 20px;
   }
+  
 }    
 
 
