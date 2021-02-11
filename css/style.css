@@ -353,6 +353,10 @@ img {
   }
   .header__nav-wrap.is-active {
     display: block;
+    width: 100%;
+    background-color: #000;
+    margin: auto;
+
   }
   .nav--header {
     display: inline-block;
