@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
     $(document).on(clickHandler, '.burger', function(){
         var userAgent = window.navigator.userAgent;
         $(this).toggleClass('is-active');
-        $('.header__nav-wrap').toggleClass('is-active');
+        $('.header_nav-wrap').toggleClass('is-active');
     });
 });
 

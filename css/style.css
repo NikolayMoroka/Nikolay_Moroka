@@ -1,3 +1,7 @@
+
+/* Reset Styles and Common Styles */
+
+
 body {
   width: 100%;
   font-family: 'PT Sans', sans-serif;
@@ -6,13 +10,13 @@ body {
   color: #fff;
 }
 
-p {
-  font-weight: 400;
-  font-size: 14px/1rem;
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+p {
+  font-weight: 400;
+  font-size: 14px/1rem;
   margin: 0;
 }
 
@@ -20,6 +24,12 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+a:hover {
+  color: #fff;
+}
+
+/* Commons */
 
 .text {
   font-size: 22px;
@@ -30,17 +40,10 @@ a {
   margin: auto;
 }
 
-a:hover {
-  color: #fff;
-}
-
 .information img {
   width: 500px;
   height: 500px;
 }
-
-
-
 
 /* Style for header */
 
@@ -50,7 +53,7 @@ a:hover {
   background-color: rgba(20, 2, 41, 0.5);
 }
 
-.header__container {
+.header_container {
   height: 80px;
   padding-left: 60px;
   padding-right: 60px;
@@ -60,7 +63,7 @@ a:hover {
   align-items: center;
 }
 
-.header__nav-wrap {
+.header_nav-wrap {
   display: block;
 }
 
@@ -79,7 +82,7 @@ a:hover {
   margin-bottom: 25px;
 }
 
-.nav__item {
+.nav_item {
   display: inline-block;
   position: relative;
   font-size: 18px;
@@ -89,11 +92,11 @@ a:hover {
   text-decoration: none; 
 }
 
-.nav__item:last-child {
+.nav_item:last-child {
   margin-right: 0px;
 }
 
-.nav__item::after {
+.nav_item::after {
   content: "";
   display: block;
   position: absolute;
@@ -105,15 +108,13 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-.nav__item:hover:after {
+.nav_item:hover:after {
   width: 100%;
 }
 
-/* Style for block about me */
-
+/* Style for container main */
 
 .main_section {
-  /* height: 550px; */
   margin-top: 50px;
   width: auto;
 }
@@ -128,13 +129,14 @@ a:hover {
   padding-left: 100px;
 }
 
-
 .title_m {
   color: white;
   font-size: 75px;
 }
 
-.block_title {
+/* Style for container information */
+
+.title {
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
@@ -192,6 +194,10 @@ a:hover {
   background-color: #292929;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.footer p, h4 {
+  justify-content: center;
 }
 
 .info_dev {
@@ -341,7 +347,7 @@ a:hover {
 }
 
 .typing-text {
-   width: 800px;
+  width: 800px;
   position: relative;
   font-size: 24px;
   color: white;
@@ -423,33 +429,33 @@ a:hover {
   .burger.burger.is-active {
     height: 30px;
   }
-  .burger__line {
+  .burger_line {
     width: 40px;
     height: 2px;
     margin-bottom: 10px;
     background-color: #fff;
     position: relative;
   }
-  .burger.is-active .burger__line-top {
+  .burger.is-active .burger_line-top {
     transform: rotate(-45deg);
     top: 12px;
   }
-  .burger.is-active .burger__line-bottom {
+  .burger.is-active .burger_line-bottom {
     transform: rotate(45deg);
   }
-  .header__container {
+  .header_container {
     display: block;
   }
-  .header__logo-wrap {
+  .header_logo-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .header__nav-wrap {
+  .header_nav-wrap {
     text-align: center;
     display: none;
   }
-  .header__nav-wrap.is-active {
+  .header_nav-wrap.is-active {
     display: block;
     width: 100%;
     background-color: #2b1553;
@@ -461,16 +467,16 @@ a:hover {
   .nav--header {
     display: inline-block;
   }
-  .nav__item {
+  .nav_item {
     display: block;
     margin-right: 0;
   }
 
-  .nav__item  + .nav__item{
+  .nav_item  + .nav_item{
     margin-top: 30px;
   }
   
-  .nav__item::after {
+  .nav_item::after {
     display: none;
   }
 
@@ -496,7 +502,6 @@ a:hover {
 
 
 @media (max-width: 575px) {
-  
   .main_img img {
     width: 300px;
   }
@@ -518,7 +523,6 @@ a:hover {
   .footer_main_nav {
     border-top: 1px solid #adadad;
   }
-
   .footer_logo {
     padding-bottom: 10px;
   }
