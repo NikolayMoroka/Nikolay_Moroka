@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .text {
   font-size: 22px;
   color: #fff;
@@ -184,9 +189,53 @@ a:hover {
 
 
 .footer {
-  height: 150px;
   background-color: #292929;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
+.info_dev {
+  font-size: 14px;
+  color: #adadad;
+  margin-top: 5px;
+}
+
+.footer_main_nav {
+  padding-left: 5%;
+}
+
+.footer_title {
+  font-weight: bold;
+  color: #adadad;
+  font-size: 18px;
+}
+
+
+.footer_navigation {
+  margin-top: 5px;
+}
+
+.footer_navigation a  {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.privacy_policy {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+
+.block_number,
+.block_email {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+
+
 
 /* style for button back to top */
 
@@ -455,6 +504,32 @@ a:hover {
     height: 300px;
     width: 300px;
   } 
+  .footer {
+    border-top:  1px solid #adadad;
+    border-bottom: 1px solid #adadad;
+  }
+  .footer_container {
+    text-align: center;
+  }
+  .footer_main_nav {
+    padding-left: 12px;
+  }
+  .footer_contacts,
+  .footer_main_nav {
+    border-top: 1px solid #adadad;
+  }
+
+  .footer_logo {
+    padding-bottom: 10px;
+  }
+  .footer_main_nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .footer_contacts {
+    padding-top: 10px;
+  }
+  
 }
 
 
