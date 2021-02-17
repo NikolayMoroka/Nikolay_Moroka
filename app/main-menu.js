@@ -18,9 +18,5 @@ jQuery(document).ready(function(){
         $(this).toggleClass('is-active');
         $('.header_nav-wrap').toggleClass('is-active');
     });
-
-    $('#mc-form').ajaxChimp({
-        url: 'http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh9'
-    });
 });
 
