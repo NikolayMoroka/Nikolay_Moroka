@@ -23,5 +23,60 @@ function createTitleMain(tagName, clName, clName2, text) {
     }, 1900);
 })();
 
+(function createAnim() {
+    const width = document.documentElement.clientWidth;
+    if( width < 576 ) {
+        const title = document.getElementsByClassName('h2');
+        for (let i = 0; i < title.length; i++) {
+            let element1 = title[i];
+            element1.dataset.aos = '';
+        };
+        const info = document.getElementsByClassName('info');
+        for (let i = 0; i < info.length; i++) {
+            let element2 = info[i];
+            element2.dataset.aos = '';
+        };
+        const img = document.getElementsByClassName('img');
+        for (let i = 0; i < img.length; i++) {
+            let element3 = img[i];
+            element3.dataset.aos = '';
+        };
+    } else {
+        console.log('all right')
+    };
+})();
 
+// jQuery
+
+
+
+jQuery(window).scroll(function () {
+    if(jQuery(window).scrollTop() > jQuery(window).height()/3) {
+        jQuery('.scrollToTop').toggleClass('showScrollTop', true);
+    } else { 
+        jQuery('.scrollToTop').removeClass('showScrollTop');
+    }
+});
+
+jQuery(document).ready(function(){
+
+    var header = $('.header');
+    var nav = $('.nav--header');
+
+    window.onscroll = function() {
+        if(window.pageYOffset > header.height()) {
+            nav.addClass('nav--move');
+        } else {
+            nav.removeClass('nav--move');
+        }
+    }
+
+    var clickHandler = ("ontouchstart" in window ? "touchend" : "click")
+
+    $(document).on(clickHandler, '.burger', function(){
+        var userAgent = window.navigator.userAgent;
+        $(this).toggleClass('is-active');
+        $('.header_nav-wrap').toggleClass('is-active');
+    });
+});
 

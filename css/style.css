@@ -8,7 +8,6 @@ body {
   line-height: 1.33;
   background-color: #3f0a7c;
   color: #fff;
-  /* overflow-y: hidden; */
   overflow-x: hidden;
 }
 
@@ -40,6 +39,10 @@ a:hover {
 
 .ma {
   margin: auto;
+}
+
+.list {
+  margin-left: 150px;
 }
 
 .information img {
@@ -114,7 +117,7 @@ a:hover {
   width: 100%;
 }
 
-/* Style for container main */
+/* Style for main */
 
 .main_section {
   margin-top: 50px;
@@ -136,7 +139,7 @@ a:hover {
   font-size: 75px;
 }
 
-/* Style for container information */
+/* Style for information */
 
 .title {
   margin-top: 50px;
@@ -153,6 +156,8 @@ a:hover {
 .info {
   margin: auto;
 }
+
+/* style for portfolio */
 
 .work {
   text-align: center;
@@ -178,7 +183,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-
+/* Style for contacts */
 
 .block_contacts {
   margin-top: 50px;
@@ -211,6 +216,8 @@ a:hover {
 
 }
 
+/* Style for footer */
+
 .footer {
   background-color: #292929;
   padding-top: 20px;
@@ -237,7 +244,6 @@ a:hover {
   font-size: 18px;
 }
 
-
 .footer_navigation {
   margin-top: 5px;
 }
@@ -253,16 +259,11 @@ a:hover {
   margin-top: 20px;
 }
 
-
 .block_number,
 .block_email {
   font-size: 14px;
   margin-top: 5px;
 }
-
-
-
-
 
 /* style for button back to top */
 
@@ -283,10 +284,9 @@ a:hover {
 }
 
 .scrollToTop span {
-   margin-top: 12px;
-   color: #fd6500;
+  margin-top: 12px;
+  color: #fd6500;
   }
-
 
 .showScrollTop { 
   font-size: 14px; 
@@ -301,39 +301,34 @@ a:hover {
 .scrollToTop:active { 
   background-color :#f70808;
 }
-  
-  /* FontAwesome */
-  @font-face { 
-    font-family:'FontAwesome';
-    src: url('../fontawesome-webfont-custom-10.ttf') format('truetype');font-weight:normal;
-    font-style:normal;
-  }
 
-  .fa {
-    display:inline-block;
-    font:normal normal normal 14px/1 FontAwesome;
-    font-size:inherit;
-    text-rendering:auto;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-  }
-  .fa-opencart:before{ content:"\f23d";}
-  .fa-phone:before{ content:"\e800";}
-  .fa-clock-o:before{ content:"\e801";}
-  .fa-truck:before{ content:"\e802";}
-  .fa-credit-card:before{ content:"\e808";}
-  .fa-chevron-up:before{ content:"\e805";}
-  .fa-search:before{ content:"\e806";}
-  .fa-cancel-circled:before { content:"\e810";}
-  .fa-angle-right:before { content:"\f105";}
-  .fa-location:before { content:"\e80d";}
+  /* FontAwesome */
+@font-face { 
+  font-family:'FontAwesome';
+  src: url('../fontawesome-webfont-custom-10.ttf') format('truetype');font-weight:normal;
+  font-style:normal;
+}
+
+.fa {
+  display:inline-block;
+  font:normal normal normal 14px/1 FontAwesome;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.fa-opencart:before{ content:"\f23d";}
+.fa-phone:before{ content:"\e800";}
+.fa-clock-o:before{ content:"\e801";}
+.fa-truck:before{ content:"\e802";}
+.fa-credit-card:before{ content:"\e808";}
+.fa-chevron-up:before{ content:"\e805";}
+.fa-search:before{ content:"\e806";}
+.fa-cancel-circled:before { content:"\e810";}
+.fa-angle-right:before { content:"\f105";}
+.fa-location:before { content:"\e80d";}
 
 /* style for animation */
-
-.flip{
-  animation: rotateIn;
-  animation-duration: 1.5s;
-}
 
 .animation_backInLeft {
   animation: backInLeft;
@@ -349,49 +344,6 @@ a:hover {
   animation: fadeInUpBig;
   animation-duration: 2.5s;
 }
-
-.animation_fadeInLeft{
-  animation: fadeInLeft;
-  animation-duration: 1500ms;
-}
-
-.animation_fadeInRight{
-  animation: fadeInRight;
-  animation-duration: 1500ms;
-}
-
-.bling {
-  animation: 
-    typing 2.5s steps(40, end),
-    blink-caret .5s step-end infinite;
-    
-}
-
-.typing-text {
-  width: 800px;
-  position: relative;
-  font-size: 24px;
-  color: white;
-  overflow: hidden; 
-  border-right: .15em solid orange;
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em; 
-  animation-fill-mode: none;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-}
-
-
-
 
 [data-aos="rotate"] {
   transform: rotate(-360deg);
@@ -416,7 +368,6 @@ a:hover {
 }
 
 @media screen and (max-width: 1199px) {
-  
   .title_m {
     font-size: 65px;
   }
@@ -433,17 +384,19 @@ a:hover {
 }
 
 @media screen and (max-width: 991px) {
-
   section {
+    width: inherit;
     position: absolute;
     margin-top: 700px;
     z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
+  
   .main {
     position: absolute;
     z-index: 1;
   }
-
   .logo {
       margin-top: 10px;
       margin-bottom: 10px;
@@ -492,7 +445,8 @@ a:hover {
     position: absolute;
     padding: 15px 0;
     margin-left: -20px;
-    border-top: 1px solid #fff
+    border-top: 1px solid #fff;
+    z-index: 100;
   }
   .nav--header {
     display: inline-block;
@@ -501,19 +455,15 @@ a:hover {
     display: block;
     margin-right: 0;
   }
-
   .nav_item  + .nav_item{
     margin-top: 30px;
   }
-  
   .nav_item::after {
     display: none;
   }
-
   .main_section {
     margin-top: 25px;
   }
-
   .main_title {
     margin-top: 25px;
     padding: 0;
@@ -534,7 +484,6 @@ a:hover {
     margin: auto;
     margin-bottom: 15px;
   }
-  
   .porfolio_img_2 {
     text-align: center;
     z-index: 1;
@@ -550,6 +499,9 @@ a:hover {
     padding-right: 20px;
   }
   .info {
+    margin: auto;
+  }
+  .list {
     margin: auto;
   }
   .main_img img {
@@ -593,7 +545,6 @@ a:hover {
     position: relative;
     margin: auto;
   }
-  
 }
 
 
