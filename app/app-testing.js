@@ -10,17 +10,17 @@ function createTitleMain(tagName, clName, clName2, text) {
 (function foo() {
     setTimeout(() => {
         createTitleMain('h1','title_m', 'animation_backInLeft', 'YOUR'); 
-    }, 500);
+    }, 200);
     setTimeout(() => {
         createTitleMain('h1','title_m', 'animation_backInRight', 'FRONT-END'); 
-    }, 1200);
+    }, 900);
     setTimeout(() => {
         createTitleMain('h1','title_m', 'animation_backInLeft', 'DEVELOPER'); 
-    }, 1700);
+    }, 1400);
     setTimeout(() => {
         createTitleMain('p', 'text', 'animation_backInUp', 'My name is Nikolay Moroka');
         createTitleMain('p', 'text', 'animation_backInUp', 'I will create the best website for your buisness');
-    }, 2200);
+    }, 1900);
 })();
 
 
