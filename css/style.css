@@ -165,7 +165,7 @@ a:hover {
 .porfolio_img_2 {
   position: absolute;
   z-index: 100;
-  margin-top: -400px;
+  margin-top: -380px;
   margin-left: 240px;
 }
 
@@ -210,8 +210,6 @@ a:hover {
   border-radius: 25px;
 
 }
-
-
 
 .footer {
   background-color: #292929;
@@ -436,6 +434,15 @@ a:hover {
 
 @media screen and (max-width: 991px) {
 
+  section {
+    position: absolute;
+    margin-top: 700px;
+    z-index: 0;
+  }
+  .main {
+    position: absolute;
+    z-index: 1;
+  }
 
   .logo {
       margin-top: 10px;
